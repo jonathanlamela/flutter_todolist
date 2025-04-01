@@ -33,8 +33,9 @@ class HomeScreenState extends State<HomeScreen> {
           children: [
             AddForm(
               onAdd: (value) {
-                items.add(value);
-                setState(() {});
+                setState(() {
+                  items.add(value);
+                });
               },
             ),
             Expanded(child: TodoList(items: items)),

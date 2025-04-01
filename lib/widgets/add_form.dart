@@ -37,9 +37,10 @@ class _AddFormState extends State<AddForm> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      widget.onAdd(textEditingController.text);
-                      textEditingController.text = "";
-                      setState(() {});
+                      setState(() {
+                        widget.onAdd(textEditingController.text);
+                        textEditingController.text = "";
+                      });
                     },
                     child: Text("Aggiungi"),
                   ),
