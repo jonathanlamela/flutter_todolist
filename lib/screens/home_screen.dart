@@ -17,7 +17,6 @@ class HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    print(items);
   }
 
   @override
@@ -38,6 +37,7 @@ class HomeScreenState extends State<HomeScreen> {
                 });
               },
             ),
+            SizedBox(height: 16),
             Expanded(child: TodoList(items: items)),
           ],
         ),
